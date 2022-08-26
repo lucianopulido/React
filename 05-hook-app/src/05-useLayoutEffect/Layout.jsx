@@ -1,9 +1,10 @@
 import { useFetch } from "../hooks/useFetch";
 import { useCounter } from "../hooks/useCounter";
-import { LoadingQuote } from "./LoadingQuote";
-import { Quote } from "./Quote";
+import { LoadingQuote } from "../03-example/LoadingQuote";
+import { Quote } from "../03-example/Quote";
 
-export const MultipleCustomHooks = () => {
+
+export const Layout = () => {
   const { counter, increment } = useCounter(1);
   const url = `https://www.breakingbadapi.com/api/quotes/${counter}`;
   const { state } = useFetch(url);
